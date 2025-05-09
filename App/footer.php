@@ -4,7 +4,7 @@
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 3.2.0
     </div>
-  </footer>
+</footer>
 
   <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
@@ -53,6 +53,10 @@
 <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+<!-- FullCalendar -->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
 <script>
   $(function () {
     $("#example1").DataTable({
@@ -75,6 +79,7 @@
 <script src="plugins/fullcalendar/main.js"></script>
 
 <script>
+  // kalender
   $(function () {
 
     /* initialize the external events
@@ -112,10 +117,10 @@
         y    = date.getFullYear()
 
     var Calendar = FullCalendar.Calendar;
-    var Draggable = FullCalendar.Draggable;
+    // var Draggable = FullCalendar.Draggable;
 
-    var containerEl = document.getElementById('external-events');
-    var checkbox = document.getElementById('drop-remove');
+    // var containerEl = document.getElementById('external-events');
+    // var checkbox = document.getElementById('drop-remove');
     var calendarEl = document.getElementById('calendar');
 
     // initialize the external events
@@ -240,6 +245,7 @@
       $('#new-event').val('')
     })
   })
+
   $(document).ready(function(){
     setInterval(function(){
       $('#report-mhs').load("bener.php");

@@ -11,20 +11,19 @@ $view  = mysqli_fetch_array($query);
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <form method='get' action="update/update_data.php">
+                <form method='post' action="update/update_data.php?id=<?= $id?>&kode=member">
                   <div class="row">
                     <div class="col-sm-6">
                       <!-- text input -->
                       <div class="form-group">
                         <label>Nama</label>
-                        <input type="text" class="form-control" placeholder="nama" name="'nama" value="<?php echo $view['nama'];?>">
-                        <input type="text" class="form-control" placeholder="nama" name="'id" value="<?php echo $view['id'];?>" hidden>
+                        <input type="text" class="form-control" placeholder="nama" name="nama" value="<?php echo $view['nama'];?>">
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>No_HP</label>
-                        <input type="text" class="form-control" placeholder="no_hp" name="'no_hp" value="<?php echo $view['no_hp'];?>">
+                        <input type="text" class="form-control" placeholder="no_hp" name="no_hp" value="<?php echo $view['no_hp'];?>">
                       </div>
                     </div>
                     <div class="col-sm-6">
@@ -36,7 +35,7 @@ $view  = mysqli_fetch_array($query);
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Paket</label>
-                        <input type="text" class="form-control" placeholder="paket" value="<?php echo $view['paket'];?>" >
+                        <input type="text" class="form-control" name="paket" placeholder="paket" value="<?php echo $view['paket'];?>" >
                       </div>
                     </div>
                   </div>
@@ -46,9 +45,9 @@ $view  = mysqli_fetch_array($query);
                       <div class="form-group">
                         <label>Status</label>
                         <select class="custom-select" name="status" required>
-                            <option value="<?php echo $view['paket'];?>" selected><?php echo $view['paket'];?></option>
-                            <option value="Berlangsung">Berlangsung</option>
-                            <option value="Selesai">Selesai</option>
+                            <option value="">- PILIH -</option>
+                            <option <?= ($view['status'] == 'Berlangsung') ? 'selected' : '' ?> value="Berlangsung">Berlangsung</option>
+                            <option <?= ($view['status'] == 'Selesai') ? 'selected' : '' ?> value="Selesai">Selesai</option>
                         </select>
                       </div>
                     </div>

@@ -11,20 +11,19 @@ $view  = mysqli_fetch_array($query)
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <form method="get" action="update/update_data.php">
+                <form method="post" action="update/update_data.php?id=<?= $id?>&kode=karyawan">
                   <div class="row">
                     <div class="col-sm-6">
                       <!-- text input -->
                       <div class="form-group">
                         <label>Nama</label>
-                        <input type="text" class="form-control" placeholder="nama" name="'nama" value="<?php echo $view['nama'];?>">
-                        <input type="text" class="form-control" placeholder="nama" name="'id" value="<?php echo $view['id'];?>" hidden>
+                        <input type="text" class="form-control" placeholder="nama" name="nama" value="<?php echo $view['nama'];?>">
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Email</label>
-                        <input type="text" class="form-control" placeholder="Email" name='Email' value="<?php echo $view['Email'];?>" >
+                        <input type="text" class="form-control" placeholder="Email" name='email' value="<?php echo $view['Email'];?>" >
                       </div>
                     </div>
                     <div class="col-sm-6">

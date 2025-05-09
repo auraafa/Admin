@@ -43,7 +43,7 @@
           </li>
          
           <li class="nav-item">
-            <a href="index.php?page=kalender.php" class="nav-link">
+            <a href="index.php?page=kalender" class="nav-link">
               <i class="nav-icon fas fa-calendar"></i>
               <p>
                 Kalender
@@ -53,7 +53,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="index.php?page=dokumen.php" class="nav-link">
+            <a href="index.php?page=dokumen" class="nav-link">
               <i class="nav-icon fas fa-folder"></i>
               <p>
                 Dokumen
